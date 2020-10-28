@@ -1,0 +1,12 @@
+
+public class C_Simple
+{
+
+	public static void main(String[] args)
+	{
+		for(int i = 0 ; i < args.length; i++)
+			System.out.println(args[i]);
+	}
+}
+//ar에 있는걸 다 꺼내서 츰부터 끝까지 int e에다가 넣어주겠다
+//1, 2, 3, 4, 5로 초기화
