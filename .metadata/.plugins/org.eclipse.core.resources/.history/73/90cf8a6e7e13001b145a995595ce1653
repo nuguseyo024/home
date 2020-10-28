@@ -1,0 +1,28 @@
+
+public class Quiz0604
+{
+
+	public static void main(String[] args)
+	{
+		int num = 1;
+		int result = 0;
+		result = result + num;
+		int Max = 1000;
+		do
+		{
+			if(num < Max)
+			{
+				System.out.print(num + " + ");
+				num++;
+			}
+			else
+			{
+				System.out.println(" = " + result);
+			}
+		}while(num <= Max);
+	}
+}
+
+//do 
+//{	
+//} while(조건);

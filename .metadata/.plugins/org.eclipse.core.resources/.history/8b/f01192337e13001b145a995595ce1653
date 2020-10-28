@@ -1,0 +1,23 @@
+
+public class Quiz0604
+{
+
+	public static void main(String[] args)
+	{
+		int num = 1;
+		int result = 0;
+		result = result + num;
+		do
+		{
+			if(num < 10)
+			{
+				System.out.print(num + " + ");
+				num++;
+			}
+		}while(num <= 10);
+	}
+}
+
+//do 
+//{	
+//} while(조건);

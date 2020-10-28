@@ -1,0 +1,36 @@
+package Quiz13;
+import java.util.Scanner;
+
+public class ch13_3
+{
+
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		int[] num /*선언*/ = new int[10];
+		
+		for(int i = 0;i < 10; i++)
+		{
+			num[i] = sc.nextInt();
+		}		
+		int holsoo = Hols(num);
+		System.out.println(holsoo);
+
+	}
+	
+	public static int Hols(int[] num)
+	{
+		int holsoo = 0;
+		for(int i = 0; i < num.length; i++)
+		{
+			if(num[i] % 2 == 1) 
+			{
+				holsoo = num[i];
+			}	
+		}
+		return holsoo;
+	}
+}	
+//문제3
+//길이가 10인 배열을 선언하고 총 10개의 정수를 입력받아서 홀수와 짝수를
+//구분해서 출력하라.

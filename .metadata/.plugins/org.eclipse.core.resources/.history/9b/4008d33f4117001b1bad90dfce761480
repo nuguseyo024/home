@@ -1,0 +1,35 @@
+abstract class Animal2
+{
+	int age; //추상클래스에는 int 도 쓸 수 있삼
+	abstract void cry{System.out.println("멍멍");};
+}//나를 상속받는 애는 이거(abstract~~)는 꼭 해야한다
+
+class Dog2 extends Animal2
+{
+	void cry()
+	{
+		System.out.println("멍멍");
+	}
+}
+class Cat2 extends Animal2
+{
+	void cry() 
+	{
+		System.out.println("야옹");
+	}
+}
+public class AbstractClassEx2
+{
+
+	public static void main(String[] args)
+	{
+		Dog2 dog = new Dog2();
+		dog.cry();
+		
+		Cat2 cat = new Cat2();
+		cat.cry();
+	}
+
+}
+
+//추상 클래스 자체는 new를 못해

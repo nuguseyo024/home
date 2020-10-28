@@ -1,0 +1,19 @@
+package Quiz07;
+
+public class Quiz0701
+{
+
+	public static void main(String[] args)
+	{
+		int result;
+		result = JJ(5, 10, 15);
+		
+		
+	}
+	public static int JJ(int n1,int n2,int n3)
+	{
+		int nResult = ((n1+n2+n3)/3);
+		return nResult;
+	}
+
+}

@@ -1,0 +1,28 @@
+
+public class Quiz0604_ssam
+{
+
+	public static void main(String[] args)
+	{
+	int num = 1;
+	int result = 0;
+	
+	do 
+	{
+		if(n <= 10)
+		{
+			System.out.print(num + " + ");
+		}
+		else
+		{
+			System.out.print(num + " = ");
+		}
+		result = result + num;
+		num++;
+	}while (num <=10);
+	
+	System.out.println("결과 : " + result);
+		
+	}
+}
+

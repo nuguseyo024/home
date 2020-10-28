@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Quiz0603
+{
+
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+//		System.out.print("정수를 입력하세요 : ");
+//		long num = sc.nextInt();
+		
+		int num = 5;
+		int result = 1;
+		result = result * num;
+		while(num > 1)
+		{
+			if(num > 1)
+			{
+				System.out.print(num + " * ");
+				num++;
+			}
+			else
+			{
+				System.out.print("aa");
+			}
+		}
+
+		
+	}
+
+}

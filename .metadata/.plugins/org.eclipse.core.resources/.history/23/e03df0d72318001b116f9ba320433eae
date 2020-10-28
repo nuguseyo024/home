@@ -1,0 +1,22 @@
+class BoxA3{
+	private String conts;
+	
+	BoxA3(String cont){this.conts = cont;}
+	public String getConts() {return conts;}
+}
+public class A3_BoxArray
+{
+	public static void main(String[] args)
+	{
+		BoxA3[] ar = new BoxA3[3];
+		
+		ar[0] = new BoxA3("First");
+		ar[1] = new BoxA3("second");
+		ar[2] = new BoxA3("Third");
+		
+		System.out.println(ar[0].getConts());
+		System.out.println(ar[1].getConts());
+		System.out.println(ar[2].getConts());
+	}
+
+}

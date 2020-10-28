@@ -1,0 +1,29 @@
+
+public class Quiz0604
+{
+
+	public static void main(String[] args)
+	{
+		int num = 1;
+		int result;
+		
+		do
+		{
+			if(num < 10)
+			{
+				System.out.print(num + " + ");
+				num++;
+			}
+			else
+			{ 
+				System.out.println(" = " );
+			}
+		}
+			
+		while(num <= 10);
+		
+		
+		
+		
+	}
+}

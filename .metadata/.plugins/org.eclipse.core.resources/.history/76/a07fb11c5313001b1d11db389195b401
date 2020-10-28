@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Quiz0602
+{
+
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("국어, 영어, 수학의 점수를 차례대로 입력하세요. : ");
+		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
+		int num3 = sc.nextInt();
+		
+		int result = ((num1 + num2 + num3) / 3);
+		
+		if(result > 89) 
+		{
+			System.out.println("A");
+		}
+		else if(result > 79)
+		{
+			System.out.println("B");
+		}
+		else if(result > 69)
+		{
+			System.out.println("C");
+		}
+		else if(result > 49)
+		{
+			System.out.println("D");
+		}
+		else
+			System.out.println("F");
+
+	}
+
+}

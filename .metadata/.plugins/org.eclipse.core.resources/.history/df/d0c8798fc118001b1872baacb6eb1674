@@ -1,0 +1,27 @@
+package Quiz13;
+import java.util.Scanner;
+public class Quiz1303 //ssam
+{
+
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		int[] myNum = new int[10];
+		for(int i = 0; i < 10; i++)
+		{
+			myNum[i] = sc.nextInt();
+		}
+		
+		System.out.print("짝수 : ");
+		for(int i = 0; i < 10; i++)
+		{
+			if(myNum[i] % 2 == 0)//짝수
+			{
+				System.out.print("  "+myNum[i]); //짝수만 출력
+			}
+				
+		}
+		
+	}
+
+}

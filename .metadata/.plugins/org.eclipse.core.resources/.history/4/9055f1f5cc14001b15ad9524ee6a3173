@@ -1,0 +1,22 @@
+package Quiz07;
+
+import java.util.Random;
+
+public class RandomUse
+{
+
+	public static void main(String[] args)
+	{
+		Random randomV1 = new Random();
+		
+		System.out.println(randomV1.nextInt());
+		System.out.println(randomV1.nextInt(100)); //0~99까지의 수 출력
+		System.out.println(randomV1.nextInt(100)+900); // 900~1000까지의 수 출력 
+	
+	double randomV2 = Math.random();
+	System.out.println("1 : " + randomV2);
+	
+	}
+	
+
+}

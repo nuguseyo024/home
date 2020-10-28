@@ -1,0 +1,27 @@
+abstract class Calc
+{
+	int a = 5;
+	int b = 6;
+	
+	abstract void Plus();
+}
+
+class MyCalc extends Calc
+{
+	void Plus() {System.out.println(a+b);}
+	void Minus() {System.out.println(a-b);}
+}
+class Polymorphism1
+{
+
+	public static void main(String[] args)
+	{
+		MyCalc myCalc1 = new MyCalc();
+		myCalc1.Plus();
+		myCalc1.Minus();
+		
+		Calc myCalc2 = new MyCalc();
+		myCalc2.Plus();
+	}
+
+}
