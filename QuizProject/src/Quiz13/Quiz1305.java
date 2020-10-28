@@ -35,14 +35,6 @@ public class Quiz1305
 			System.out.println("회문입니다.");
 		else
 			System.out.println("회문이 아닙니다.");
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 
 }
