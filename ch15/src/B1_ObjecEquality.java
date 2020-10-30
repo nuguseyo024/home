@@ -16,9 +16,9 @@ public class B1_ObjecEquality
 {
 	public static void main(String[] args)
 	{	
-		INum num1 =new INum(10);
-		INum num2 =new INum(12);
-		INum num3 =new INum(10);
+		INum num1 = new INum(10);
+		INum num2 = new INum(12);
+		INum num3 = new INum(10);
 		
 		if(num1.equals(num2))
 			System.out.println("num1, num2 내용 동일");
@@ -28,7 +28,9 @@ public class B1_ObjecEquality
 			System.out.println("num1, num3 내용 동일");
 		else
 			System.out.println("num1, num3 내용 다름");
-		
+		System.out.println(num1);
+		System.out.println(num2);
+		System.out.println(num3);
 	}
 	
 
