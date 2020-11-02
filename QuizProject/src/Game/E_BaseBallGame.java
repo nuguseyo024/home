@@ -16,7 +16,10 @@ public class E_BaseBallGame
 		
 		System.out.printf("%d %d %d",com1, com2, com3);
 		
-		
+		while(true) 
+		{
+			
+		}
 		
 		
 		
