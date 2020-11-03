@@ -1,12 +1,8 @@
 INDEX VERSION 1.131+D:\junjin\Java\01.Basic\.metadata\.plugins\org.eclipse.jdt.core
-3271193799.index
-3296252979.index
-756773126.index
-1567720841.index
 3133778062.index
-3011503269.index
-1610107911.index
-3337690557.index
-1511801232.index
+1567720841.index
+3271193799.index
 1539707249.index
+3452868632.index
+2671735679.index
 712422687.index

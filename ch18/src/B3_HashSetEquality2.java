@@ -30,5 +30,4 @@ public class B3_HashSetEquality2
 		System.out.println();
 		
 	}
-
 }

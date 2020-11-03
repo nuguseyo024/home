@@ -22,5 +22,4 @@ public class B2_HashSetEquality1
 		System.out.println();
 		
 	}
-
 }
