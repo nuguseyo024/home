@@ -1,14 +1,15 @@
-package step07;
+package step09;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.StringTokenizer;
 
 public class MyPhoneBook
 {
@@ -107,31 +108,50 @@ public class MyPhoneBook
 	}
 	public static void saveInfo()
 	{
-		try(ObjectOutputStream oo = 
-				new ObjectOutputStream(new FileOutputStream("PhoneBook.bin")))
+		try(BufferedWriter bw = new BufferedWriter(new FileWriter("phone_data.csv")))
 		{
 			Set<String> ks = map.keySet();
 			for(String s : ks)
 			{
 				PhoneInfo pInfo = map.get(s);
-				oo.writeObject(pInfo);
+				String str = "\"" + pInfo.name + "\"," + 
+					       	"\"" + pInfo.phoneNumber + "\"," +
+					       	"\"" + pInfo.email + "\"";
+				bw.write(str);
+				bw.newLine();
+			}
+		}catch(IOException e) {e.printStackTrace();}
+		
+	}
+	public static void readInfo() 
+	{
+		try(BufferedReader br = new BufferedReader(new FileReader("phone_data.csv")))
+		{
+			String str;
+			while(true) 
+			{
+				str = br.readLine();
+				if(str == null)
+					break;
+				
+				StringTokenizer sToken = new StringTokenizer(str, "\",\"");
+				String name = sToken.nextToken();
+				String phoneNumber = sToken.nextToken();
+				String email = null;
+				if(sToken.hasMoreTokens()) 
+				{
+					email = sToken.nextToken();
+					System.out.println("[ " + email + " ]");
+				}
+				PhoneInfo pInfo;
+				if(email != null)
+					{pInfo = new PhoneInfo(name, phoneNumber, email);}
+				else
+					{pInfo = new PhoneInfo(name,phoneNumber);}
+				//pInfo.showPhoneInfo();
+				map.put(name, pInfo);
 			}
 		}catch(IOException e) {e.printStackTrace();}
 	}
-	public static void readInfo()
-	{
-		try(ObjectInputStream oi = 
-				new ObjectInputStream(new FileInputStream("PhoneBook.bin")))
-		{
-			while(true) 
-			{
-				PhoneInfo pInfo = (PhoneInfo) oi.readObject();
-				if(pInfo == null)
-					break;
-				map.put(pInfo.name, pInfo);
-			}
-		}catch(ClassNotFoundException e) {e.printStackTrace();}
-		catch(IOException e) {//e.printStackTrace();
-		}
-	}
+
 } 

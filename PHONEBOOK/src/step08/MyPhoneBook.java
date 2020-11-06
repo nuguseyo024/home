@@ -1,9 +1,9 @@
-package step07;
+package step08;
 
-import java.io.FileInputStream;
+import java.io.BufferedWriter;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -78,7 +78,7 @@ public class MyPhoneBook
 	
 	public static void main(String[] args)
 	{
-		readInfo();
+//		readInfo();
 		int choice;
 		while(true)
 		{
@@ -107,31 +107,35 @@ public class MyPhoneBook
 	}
 	public static void saveInfo()
 	{
-		try(ObjectOutputStream oo = 
-				new ObjectOutputStream(new FileOutputStream("PhoneBook.bin")))
+		try(BufferedWriter bw = new BufferedWriter(new FileWriter("phone_data.csv")))
 		{
 			Set<String> ks = map.keySet();
 			for(String s : ks)
 			{
 				PhoneInfo pInfo = map.get(s);
-				oo.writeObject(pInfo);
+				String str = "\"" + pInfo.name + "\"," + 
+					       	"\"" + pInfo.phoneNumber + "\"," +
+					       	"\"" + pInfo.email + "\"";
+				bw.write(str);
+				bw.newLine();
 			}
 		}catch(IOException e) {e.printStackTrace();}
+		
 	}
-	public static void readInfo()
-	{
-		try(ObjectInputStream oi = 
-				new ObjectInputStream(new FileInputStream("PhoneBook.bin")))
-		{
-			while(true) 
-			{
-				PhoneInfo pInfo = (PhoneInfo) oi.readObject();
-				if(pInfo == null)
-					break;
-				map.put(pInfo.name, pInfo);
-			}
-		}catch(ClassNotFoundException e) {e.printStackTrace();}
-		catch(IOException e) {//e.printStackTrace();
-		}
-	}
+//	public static void readInfo()
+//	{
+//		try(ObjectInputStream oi = 
+//				new ObjectInputStream(new FileInputStream("PhoneBook.bin")))
+//		{
+//			while(true) 
+//			{
+//				PhoneInfo pInfo = (PhoneInfo) oi.readObject();
+//				if(pInfo == null)
+//					break;
+//				map.put(pInfo.name, pInfo);
+//			}
+//		}catch(ClassNotFoundException e) {e.printStackTrace();}
+//		catch(IOException e) {//e.printStackTrace();
+//		}
+//	}
 } 
