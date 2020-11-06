@@ -12,7 +12,7 @@ public class D2_TextReader
 		System.out.print("읽을 파일 : ");
 		String src = sc.nextLine();
 		
-		try(Reader in = new FileReader(src))
+		try(Reader in = new FileReader(src + ".txt"))
 		{
 			int ch;
 			
